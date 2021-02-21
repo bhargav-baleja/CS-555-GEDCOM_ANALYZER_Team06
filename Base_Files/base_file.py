@@ -233,7 +233,7 @@ class Repository:
             pt.add_row(value.info_individual())
         print("Individuals")
         print(pt)
-        # comment this line to print pretty table in terminal
+        yield pt    # comment this line to print pretty table in terminal
 
     def family_pretty_table(self):
         """Family pretty table"""
@@ -242,7 +242,7 @@ class Repository:
             pt.add_row(value.info_family())
         print("Families")
         print(pt)
-        # comment this line to print pretty table in terminal
+        yield pt    # comment this line to print pretty table in terminal
 
 
 if __name__ == '__main__':
