@@ -150,8 +150,6 @@ class Repository:
             Checks individual should be less than or equal to 5000 and families should be less than or equal to 1000
         """
         file_name: str = os.path.join(self._path, 'Gedcom_Project03.ged')
-        # current_directory = os.getcwd()
-        # set_current_directory = os.chdir(current_directory)
         try:
             fp: IO = open(file_name, 'r')
         except FileNotFoundError:
