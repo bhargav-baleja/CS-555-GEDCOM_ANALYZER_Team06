@@ -193,25 +193,25 @@ class Repository:
         """
         id = ""
         fam_id = ""
-        indi_flag = False
+        individual_flag = False
 
         for tag, arg in self._validate_gedcom():
-            if tag == "INDI" and not indi_flag:
+            if tag == "INDI" and not individual_flag:
                 id = arg
                 if arg not in self._individual.keys():
                     self._individual[arg] = Individual(arg)
-            elif tag == "NAME" and not indi_flag:
+            elif tag == "NAME" and not individual_flag:
                 self._individual[id].set_name(arg)
-            elif tag == "SEX" and not indi_flag:
+            elif tag == "SEX" and not individual_flag:
                 self._individual[id].set_gender(arg)
-            elif tag == "DATE" and not indi_flag:
+            elif tag == "DATE" and not individual_flag:
                 self._individual[id].set_birth_death_date(arg)
-            elif tag == "FAMC" and not indi_flag:
+            elif tag == "FAMC" and not individual_flag:
                 self._individual[id].set_child(arg)
-            elif tag == "FAMS" and not indi_flag:
+            elif tag == "FAMS" and not individual_flag:
                 self._individual[id].set_spouse(arg)
             elif tag == "FAM":
-                indi_flag = True
+                individual_flag = True
                 fam_id = arg
                 if arg not in self._family.keys():
                     self._family[arg] = Family(arg)
@@ -247,5 +247,5 @@ class Repository:
 
 if __name__ == '__main__':
     """ main file"""
-    indi_repo: Repository = Repository("D:/CS-555-B/Gedcom_Files/")  # change path where you gedcomfile is present
+    individual_repository: Repository = Repository("D:/CS-555-B/Gedcom_Files/")  # change path where you gedcomfile is present
 
