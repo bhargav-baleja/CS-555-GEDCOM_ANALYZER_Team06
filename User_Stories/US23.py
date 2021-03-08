@@ -1,7 +1,7 @@
 # Format Name.key = Date
 NAME = {}
 
-with open("input.ged","r") as reader: 
+with open("../GEDCOM_Files/US22_23.ged", "r") as reader:
 
     indi_group = False
     current_indi = ""

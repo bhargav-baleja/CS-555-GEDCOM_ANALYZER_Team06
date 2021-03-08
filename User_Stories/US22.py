@@ -34,7 +34,7 @@ def saveIndi(I):
     return True
     
 
-with open("input.ged","r") as reader: 
+with open("../GEDCOM_Files/US22_23.ged", "r") as reader:
 
     for line in reader.readlines():
         sLine = line.replace("\n","").replace("\t","").split(" ")
