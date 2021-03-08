@@ -10,7 +10,7 @@ def main():
     sys.stdout = Logger()
     # Creating an object of class Repository that will contains both individual and family dictionaries.
     # Pass the path of your GEDCOM file as a parameter below.
-    repository = Repository("../GedcomFiles/ssw555_input_file.ged")
+    repository = Repository("../GEDCOM_Files/Gedcom_Project03.ged")
     individual = repository.get_individual()
     family = repository.get_family()
 
