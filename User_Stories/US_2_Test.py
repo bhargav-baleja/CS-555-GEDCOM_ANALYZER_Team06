@@ -6,7 +6,7 @@ Purpose: Testing for user story 02
 
 import unittest
 from Base_Files.Repository import Repository
-from User_Stories.US_02 import US_2
+from User_Stories.US_2 import US_2
 
 class Test_US_02(unittest.TestCase):
     """ Function that tests user story 3 """

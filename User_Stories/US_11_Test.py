@@ -12,6 +12,7 @@ class Test_US11(unittest.TestCase):
 
     def test_user_story_11(self):
         """ Tests that husbands and wifes are not married twice at the same time and prints out the cases if so"""
+
         repository = Repository('../GEDCOM_Files/US_11.ged')
         output = ['Ramesh /Patel/married twice at the same time', 'Anushka /Shah/married twice at the same time']
         self.assertEqual(US_11(repository), output)
