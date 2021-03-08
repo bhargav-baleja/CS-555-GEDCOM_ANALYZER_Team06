@@ -6,7 +6,7 @@ Purpose: Testing for user story 02
 
 import unittest
 from Base_Files.Repository import Repository
-from User_Stories.US_02 import US_02
+from User_Stories.US_02 import US_2
 
 class Test_US_02(unittest.TestCase):
     """ Function that tests user story 3 """
@@ -16,5 +16,8 @@ class Test_US_02(unittest.TestCase):
         expected = ['US_02: Micheal /Mia/ birthday after marriage date on line number 604',
                     'US_02: Mike /Robinson/ birthday after marriage date on line number 604',
                     'US_02: Sam /Robinson/ birthday after marriage date on line number 633']
-        actual = US_02(repository.get_individual(), repository.get_family())
+        actual = US_2(repository.get_individual(), repository.get_family())
         self.assertEqual(expected, actual)
+
+if __name__ == "__main__":
+    unittest.main(exit=False)

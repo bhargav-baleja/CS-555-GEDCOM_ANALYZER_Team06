@@ -4,7 +4,7 @@ CS 555 Agile Methods for Software Development
 Purpose: Testing for user story 02
 """
 
-def US_02(individual, family):
+def US_2(individual, family):
     """checks if a person's birthday occurs before their marriage"""
     warnings = list()
 
