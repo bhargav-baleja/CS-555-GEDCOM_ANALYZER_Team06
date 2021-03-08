@@ -3,11 +3,11 @@ Ran 5 tests in 0.017s
 
 OK
 PS D:\phoenix\courses\555\SPRINT 1\CS-555-GEDCOM_ANALYZER_Team06\User_stories> python US23-TC.py
-test_us22_1 (__main__.UnitTestUS22) ... ok
-test_us22_2 (__main__.UnitTestUS22) ... ok
-test_us22_3 (__main__.UnitTestUS22) ... ok
-test_us22_4 (__main__.UnitTestUS22) ... ok
-test_us22_5 (__main__.UnitTestUS22) ... ok
+test_us23_1 (__main__.UnitTestUS22) ... ok
+test_us23_2 (__main__.UnitTestUS22) ... ok
+test_us23_3 (__main__.UnitTestUS22) ... ok
+test_us23_4 (__main__.UnitTestUS22) ... ok
+test_us23_5 (__main__.UnitTestUS22) ... ok
 
 ----------------------------------------------------------------------
 Ran 5 tests in 0.006s
