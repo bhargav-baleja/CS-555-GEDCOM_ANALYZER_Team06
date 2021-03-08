@@ -1,36 +1,44 @@
 # Format Name.key = Date
-NAME = {}
+NAME = dict()
 
-with open("input.ged","r") as reader: 
+def US23(file):
+    with open(file,"r") as reader: 
 
-    indi_group = False
-    current_indi = ""
-    current_name = ""
-    birt_flag = False
+        indi_group = False
+        current_indi = ""
+        current_name = ""
+        birt_flag = False
+        errList = []
 
-    for line in reader.readlines():
-        sLine = line.replace("\n","").replace("\t","").split(" ")
+        for line in reader.readlines():
+            sLine = line.replace("\n","").replace("\t","").split(" ")
 
-        if( len(sLine) >= 1 ):
-            if sLine[1] == 'NAME':
-                current_name = " ".join(sLine[2:])
-            
-            elif sLine[1] == 'BIRT':
-                birt_flag = True
-
-            elif sLine[1] == 'DATE' and birt_flag:
-                f_date = "_".join(sLine[2:])
-                if current_name not in NAME.keys():
-                    NAME[current_name] = f_date
-                    #print(f"Added Name {current_name} with birthdate : {f_date} ")
-                elif NAME[current_name] == f_date:
-                    print(f"US23 : Name {current_name} with birthdate {f_date} already exists")
+            if( len(sLine) >= 1 ):
+                if sLine[1] == 'NAME':
+                    current_name = " ".join(sLine[2:])
                 
-                birt_flag = False
+                elif sLine[1] == 'BIRT':
+                    birt_flag = True
+
+                elif sLine[1] == 'DATE' and birt_flag:
+                    f_date = "_".join(sLine[2:])
+                    if current_name not in NAME.keys():
+                        NAME[current_name] = f_date
+                        #print(f"Added Name {current_name} with birthdate : {f_date} ")
+                    elif NAME[current_name] == f_date:
+                        errList.append(f"US23 : Name {current_name} with birthdate {f_date} already exists")
+                        #print(f"US23 : Name {current_name} with birthdate {f_date} already exists")
+                    
+                    birt_flag = False
 
 
-        if (len(sLine) == 3):
+            if (len(sLine) == 3):
 
-            if sLine[2] == 'INDI':
-                indi_group = True
-                current_indi = sLine[1]
+                if sLine[2] == 'INDI':
+                    indi_group = True
+                    current_indi = sLine[1]
+        
+        return errList
+
+
+#US23('input.ged')
