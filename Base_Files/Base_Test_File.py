@@ -13,7 +13,7 @@ class TestRepository(unittest.TestCase):
         super(TestRepository, self).__init__(*args, **kwargs)
         # Creating an object of class Repository that will contains both individual and family dictionaries.
         # Pass the path of your GEDCOM file as a parameter below.
-        self.repository = Repository('../GedcomFiles/ssw555_input_file.ged')
+        self.repository = Repository('../GedcomFiles/')
 
 if __name__ == "__main__":
     """ Runs all the tests created above. """

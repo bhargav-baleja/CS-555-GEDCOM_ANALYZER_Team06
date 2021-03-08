@@ -102,12 +102,3 @@ class Repository:
         for value in self._family.values():
             pt.add_row(value.info_family())
         print(pt)
-
-    def add_individual(self, i):
-        """ must pass in individual
-        US22: checks if the individual ids are unique
-        """
-        if i.iid in self._individual.keys():
-            print(f'US22 - {i.iid} id has a duplicate in line number ')
-        self._individual[i.iid] = i
-        return Individual()
