@@ -1,20 +1,74 @@
-+------+--------------------+--------+------------+-----+-------+------------+----------+------------------+
-|  Id  |        Name        | Gender |  Birthday  | Age | Alive | Deathdate  |  Child   |      Spouse      |
-+------+--------------------+--------+------------+-----+-------+------------+----------+------------------+
-| @I1@ | Divyesh /Purohit/  |   M    | 1981-09-12 |  39 |  True |     NA     | {'@F1@'} |        NA        |
-| @I2@ |  Harish /Purohit/  |   M    | 1955-03-09 |  66 |  True |     NA     | {'@F3@'} | {'@F2@', '@F1@'} |
-| @I3@ |    Leela /Khan/    |   F    | 1960-10-08 |  60 |  True |     NA     |    NA    |     {'@F2@'}     |
-| @I4@ |  Sita /Mokariya/   |   F    | 1959-08-08 |  61 |  True |     NA     |    NA    |     {'@F1@'}     |
-| @I5@ |  Suresh /Purohit/  |   M    | 1920-01-04 | 101 |  True |     NA     |    NA    |     {'@F3@'}     |
-| @I6@ |  Sangita /Mehta/   |   F    | 1925-05-08 |  65 | False | 1990-11-14 |    NA    |     {'@F3@'}     |
-| @I7@ | Aaradhya /Purohit/ |   F    | 1983-05-05 |  37 |  True |     NA     | {'@F1@'} |        NA        |
-| @I8@ |  Suresh /Purohit/  |   M    | 1990-04-09 |  30 |  True |     NA     | {'@F2@'} |        NA        |
-| @I9@ | Pavitra /Purohit/  |   F    | 1993-10-10 |  27 |  True |     NA     | {'@F2@'} |        NA        |
-+------+--------------------+--------+------------+-----+-------+------------+----------+------------------+
-+------+------------+------------+------------+------------------+---------+-----------------+------------------+
-|  Id  |  Married   |  Divorced  | Husband ID |   Husband Name   | Wife ID |    Wife Name    |     Children     |
-+------+------------+------------+------------+------------------+---------+-----------------+------------------+
-| @F1@ | 1979-05-11 | 1985-11-09 |    @I2@    | Harish /Purohit/ |   @I4@  | Sita /Mokariya/ | {'@I7@', '@I1@'} |
-| @F2@ | 1987-04-08 |     NA     |    @I2@    | Harish /Purohit/ |   @I3@  |   Leela /Khan/  | {'@I8@', '@I9@'} |
-| @F3@ | 1948-09-10 |     NA     |    @I5@    | Suresh /Purohit/ |   @I6@  | Sangita /Mehta/ |     {'@I2@'}     |
-+------+------------+------------+------------+------------------+---------+-----------------+------------------+
++-------+-------------------+--------+------------+-----+-------+------------+-----------+--------------------------+
+|   Id  |        Name       | Gender |  Birthday  | Age | Alive | Deathdate  |   Child   |          Spouse          |
++-------+-------------------+--------+------------+-----+-------+------------+-----------+--------------------------+
+|  @I1@ |    Meet /Desai/   |   M    | 1822-01-01 |  68 | False | 1890-03-06 |     NA    | {'@F3@', '@F1@', '@F2@'} |
+|  @I2@ |   Trupti /Desai/  |   F    | 1830-01-12 | 100 | False | 1930-06-12 |  {'@F6@'} | {'@F1@', '@F4@', '@F5@'} |
+|  @I3@ |   Rakesh /Desai/  |   M    | 1790-11-26 |  59 | False | 1850-09-09 |     NA    |         {'@F6@'}         |
+|  @I4@ |   Monica /Bhatt/  |   F    | 1792-11-12 |  47 | False | 1840-04-02 |     NA    |     {'@F3@', '@F6@'}     |
+|  @I5@ |   Abhay /Mehta/   |   M    | 1823-02-01 |  48 | False | 1871-04-06 |  {'@F6@'} |            NA            |
+|  @I6@ |   Kevin /Desai/   |   M    | 1824-02-01 |  55 | False | 1880-01-10 |  {'@F6@'} |     {'@F8@', '@F7@'}     |
+|  @I7@ |   Urvika /Bhatt/  |   F    | 1832-02-14 |  68 | False | 1900-06-24 |     NA    |         {'@F7@'}         |
+|  @I8@ |   Preeti /Joshi/  |   F    | 1828-04-14 |  41 | False | 1869-04-09 |     NA    |         {'@F8@'}         |
+|  @I9@ |    Devu /Desai/   |   M    | 1849-09-09 |  38 | False | 1888-08-02 |  {'@F8@'} |            NA            |
+| @I10@ |   Laxman /Desai/  |   M    | 1866-10-08 |  83 | False | 1950-04-12 |  {'@F7@'} |         {'@F9@'}         |
+| @I11@ |   Riddhi /Desai/  |   F    | 1868-10-09 |  61 | False | 1930-01-12 |     NA    |         {'@F9@'}         |
+| @I12@ |   Hiral /Desai/   |   F    | 1899-09-05 | 121 |  True |     NA     |  {'@F9@'} |        {'@F10@'}         |
+| @I13@ |   Govind /Borad/  |   M    | 1898-12-19 |  71 | False | 1970-08-10 |     NA    |        {'@F10@'}         |
+| @I14@ | Miller /Robinson/ |   M    | 1964-11-11 |  56 |  True |     NA     |     NA    |        {'@F11@'}         |
+| @I15@ |  Ellie /Robinson/ |   F    | 1967-08-15 |  53 |  True |     NA     |     NA    |        {'@F11@'}         |
+| @I16@ |   Sam /Robinson/  |   M    | 2000-09-13 |  20 |  True |     NA     |     NA    |            NA            |
+| @I17@ | Miller /Robinson/ |   F    | 1980-09-13 |  40 |  True |     NA     | {'@F11@'} |        {'@F12@'}         |
+| @I18@ |  Erica /Robinson/ |   F    | 1981-09-13 |  39 |  True |     NA     |     NA    |        {'@F12@'}         |
+| @I19@ |  Joey /Robinson/  |   F    | 1996-04-10 |  24 |  True |     NA     | {'@F12@'} |            NA            |
+| @I20@ |  Joey /Robinson/  |   F    | 1997-11-08 |  23 |  True |     NA     | {'@F12@'} |            NA            |
+| @I21@ |  Ross /Robinson/  |   M    | 1970-01-04 |  51 |  True |     NA     |     NA    |        {'@F13@'}         |
+| @I22@ |  Joey /Robinson/  |   F    | 1971-08-10 |  49 |  True |     NA     |     NA    |        {'@F13@'}         |
+| @I23@ |  Emmy /Robinson/  |   F    | 2020-09-22 |  0  |  True |     NA     | {'@F13@'} |            NA            |
+| @I24@ |   Jil /Robinson/  |   F    | 2020-10-01 |  0  |  True |     NA     | {'@F13@'} |            NA            |
+| @I25@ |   Bholu /Desai/   |   M    | 2020-10-10 |  0  |  True |     NA     | {'@F13@'} |         {'@F2@'}         |
+| @I26@ |    Raj /Thakor/   |   M    | 1834-05-06 |  97 | False | 1932-03-08 |     NA    |         {'@F4@'}         |
+| @I27@ |  Digant /Parekh/  |   M    | 1832-11-16 | 100 | False | 1932-11-16 |     NA    |         {'@F5@'}         |
+| @I28@ |   Mira /Parekh/   |   F    | 2004-06-12 |  16 |  True |     NA     |  {'@F5@'} |            NA            |
+| @I29@ |   Fenil /Patel/   |   M    | 1800-02-15 | 180 | False | 1980-07-10 |  {'@F6@'} |        {'@F14@'}         |
+| @I30@ |   Ankita /Patel/  |   F    | 1820-11-13 | 200 |  True |     NA     |     NA    |        {'@F14@'}         |
+| @I31@ |   Mayur /Desai/   |   M    | 2021-07-02 |  0  |  True |     NA     |  {'@F6@'} |        {'@F15@'}         |
+| @I32@ |    Naina /Shah/   |   F    | 2025-09-04 |  0  |  True |     NA     |     NA    |        {'@F15@'}         |
+| @I33@ |   Hitesh /Desai/  |   M    | 1990-02-05 |  31 |  True |     NA     | {'@F15@'} |        {'@F16@'}         |
+| @I34@ |    Nidhi /Sinh/   |   F    | 1990-06-02 |  30 |  True |     NA     |     NA    |        {'@F16@'}         |
+| @I35@ |   Jayesh /Desai/  |   M    | 2021-07-02 |  0  |  True |     NA     |  {'@F6@'} |            NA            |
+| @I36@ |   Ribu /Watson/   |   M    | 1990-07-02 |  30 |  True |     NA     |     NA    |        {'@F17@'}         |
+| @I37@ |    Mikie /Roni/   |   F    | 1991-07-02 |  29 |  True |     NA     |     NA    |        {'@F17@'}         |
+| @I38@ |  Pradeep /Desai/  |   M    | 1988-07-09 |  -3 | False | 1986-05-08 |  {'@F6@'} |        {'@F18@'}         |
+| @I39@ | Keval /Kuchadiya/ |   F    | 1990-08-09 |  30 |  True |     NA     |     NA    |        {'@F18@'}         |
++-------+-------------------+--------+------------+-----+-------+------------+-----------+--------------------------+
++-------+------------+------------+------------+-------------------+---------+-------------------+--------------------------------------------------------------+
+|   Id  |  Married   |  Divorced  | Husband ID |    Husband Name   | Wife ID |     Wife Name     |                           Children                           |
++-------+------------+------------+------------+-------------------+---------+-------------------+--------------------------------------------------------------+
+|  @F1@ | 1862-07-10 |     NA     |    @I1@    |    Meet /Desai/   |   @I2@  |   Trupti /Desai/  |                              NA                              |
+|  @F4@ | 1850-12-14 |     NA     |   @I26@    |    Raj /Thakor/   |   @I2@  |   Trupti /Desai/  |                              NA                              |
+|  @F5@ | 1850-09-11 |     NA     |   @I27@    |  Digant /Parekh/  |   @I2@  |   Trupti /Desai/  |                          {'@I28@'}                           |
+|  @F2@ | 1862-07-10 |     NA     |   @I25@    |   Bholu /Desai/   |   @I1@  |    Meet /Desai/   |                              NA                              |
+|  @F3@ | 1862-07-10 |     NA     |    @I1@    |    Meet /Desai/   |   @I4@  |   Monica /Bhatt/  |                              NA                              |
+|  @F6@ | 1820-04-12 |     NA     |    @I3@    |   Rakesh /Desai/  |   @I4@  |   Monica /Bhatt/  | {'@I2@', '@I38@', '@I31@', '@I29@', '@I6@', '@I5@', '@I35@'} |
+|  @F7@ | 1862-07-10 |     NA     |    @I6@    |   Kevin /Desai/   |   @I7@  |   Urvika /Bhatt/  |                          {'@I10@'}                           |
+|  @F8@ | 1848-01-12 | 1852-07-14 |    @I6@    |   Kevin /Desai/   |   @I8@  |   Preeti /Joshi/  |                           {'@I9@'}                           |
+|  @F9@ | 1893-08-04 |     NA     |   @I10@    |   Laxman /Desai/  |  @I11@  |   Riddhi /Desai/  |                          {'@I12@'}                           |
+| @F10@ | 1925-06-05 | 1930-11-15 |   @I13@    |   Govind /Borad/  |  @I12@  |   Hiral /Desai/   |                              NA                              |
+| @F11@ |     NA     |     NA     |   @I14@    | Miller /Robinson/ |  @I15@  |  Ellie /Robinson/ |                          {'@I17@'}                           |
+| @F12@ |     NA     |     NA     |   @I18@    |  Erica /Robinson/ |  @I17@  | Miller /Robinson/ |                      {'@I19@', '@I20@'}                      |
+| @F13@ |     NA     |     NA     |   @I21@    |  Ross /Robinson/  |  @I22@  |  Joey /Robinson/  |                 {'@I23@', '@I24@', '@I25@'}                  |
+| @F14@ | 1850-05-05 | 2000-06-12 |   @I29@    |   Fenil /Patel/   |  @I30@  |   Ankita /Patel/  |                              NA                              |
+| @F15@ | 2019-03-04 | 2018-07-03 |   @I31@    |   Mayur /Desai/   |  @I32@  |    Naina /Shah/   |                          {'@I33@'}                           |
+| @F16@ |     NA     |     NA     |   @I33@    |   Hitesh /Desai/  |  @I34@  |    Nidhi /Sinh/   |                              NA                              |
+| @F17@ |     NA     |     NA     |   @I36@    |   Ribu /Watson/   |  @I37@  |    Mikie /Roni/   |                              NA                              |
+| @F18@ | 1989-08-10 |     NA     |   @I38@    |  Pradeep /Desai/  |  @I39@  | Keval /Kuchadiya/ |                              NA                              |
++-------+------------+------------+------------+-------------------+---------+-------------------+--------------------------------------------------------------+
+US_02: Bholu /Desai/ birthday after marriage date on line number 439
+US_02: Naina /Shah/ birthday after marriage date on line number 528
+US_02: Mayur /Desai/ birthday after marriage date on line number 528
+US_02: Keval /Kuchadiya/ birthday after marriage date on line number 545
+US_11: Trupti /Desai/married twice at the same time
+US_11: Trupti /Desai/married twice at the same time
+US_11: Meet /Desai/married twice at the same time
+US_11: Trupti /Desai/married twice at the same time
+US_11: Monica /Bhatt/married twice at the same time
