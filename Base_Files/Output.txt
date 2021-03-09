@@ -81,4 +81,17 @@ US22 - Individual ID Irfan02 already exists
 US23 : Name Lisa /Braeden/ with birthdate AUG_1980 already exists
 US23 : Name Adam /Milligan/ with birthdate 29_SEP_1990 already exists
 
+US_15:
+t_exactly_15_kids (__main__.TUserStory15) ... ok\
+t_less_than_15_kid (__main__.TUserStory15) ... ok\
+t_greater_than_15_kid (__main__.TUserStory15) ... ok\
+t_no_kid (__main__.TUserStory15) ... ok\
+t_same_15_kids (__main__.TUserStory15) ... ok\
 
+US_16:
+t_daugh(__main__.TUserStory16) ... ok\
+t_no_child(__main__.TUserStory16) ... ok\
+t_no_son_matches_father (__main__.TUserStory16) ... ok\
+t_one_son_sameas_fat(__main__.TUserStory16) ... ok\
+\pard\pardeftab720\partightenfactor0
+t_one_sonsameas_fat(__main__.TUserStory16) ... ok\
