@@ -1,0 +1,18 @@
+----------------------------------------------------------------------
+Ran 5 tests in 0.006s
+
+OK
+PS D:\phoenix\courses\555\SPRINT 1\CS-555-GEDCOM_ANALYZER_Team06\User_stories> python US22-TC.py
+US22 - Individual ID @I1@ already exists 
+test_duplicate_fam_insert (__main__.UnitTestUS22) ... US22 - Family ID Shaikh2 already exists      
+ok
+test_duplicate_indi_insert (__main__.UnitTestUS22) ... US22 - Individual ID Irfan02 already exists 
+ok
+test_fam_insert (__main__.UnitTestUS22) ... ok
+test_indi_insert (__main__.UnitTestUS22) ... ok
+test_instance_of_indi (__main__.UnitTestUS22) ... ok
+
+----------------------------------------------------------------------
+Ran 5 tests in 0.003s
+
+OK
