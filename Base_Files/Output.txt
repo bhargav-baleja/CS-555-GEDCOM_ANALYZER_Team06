@@ -75,8 +75,8 @@ US_11: Trupti /Desai/married twice at the same time
 US_11: Monica /Bhatt/married twice at the same time
 
 US22 - Individual ID @I1@ already exists
-test_duplicate_fam_insert (__main__.UnitTestUS22) ... US22 - Family ID Shaikh2 already exists ... ok
-test_duplicate_indi_insert (__main__.UnitTestUS22) ... US22 - Individual ID Irfan02 already exists ... ok
+US22 - Family ID Shaikh2 already exists
+US22 - Individual ID Irfan02 already exists
 
 US23 : Name Lisa /Braeden/ with birthdate AUG_1980 already exists
 US23 : Name Adam /Milligan/ with birthdate 29_SEP_1990 already exists
