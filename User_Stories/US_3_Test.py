@@ -12,15 +12,11 @@ class Test_US03(unittest.TestCase):
     def test_US_03(self):
         """ Function that tests user story 3 """
         
-        repository = Repository("")
-        output = ['Suresh /Kapoor/ birthday after death date','Kangana /Patel/ birthday after death date']
-        self.assertEqual(US_3(repository), output)
-        self.assertNotEqual(US_3(repository), ['Ramesh /Patel/ birthday after death date'])
-        self.assertTrue(US_3(repository) == ['Suresh /Kapoor/ birthday after death date', 'Kangana /Patel/ birthday after death date'])
-        self.assertFalse(US_3(repository) == ['Anushka /Shah/ birthday after death date'])
-        self.assertTrue(US_3(repository) != ['Kangana /Patel birthday after death date'])
+        repository = Repository("../GEDCOM_Files/US_03.ged")
+        expected = ['US_03: Suresh /Kapoor/ birthday after death date on line number 52','US_03: Kangana /Patel/ birthday after death date on line number 63']
+        actual = US_3(repository.get_individual())
+        self.assertEqual(actual, expected)
 
-        
 if __name__ == "__main__":
     unittest.main(exit=False)
 

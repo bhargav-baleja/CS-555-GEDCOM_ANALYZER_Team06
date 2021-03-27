@@ -1,10 +1,10 @@
 +-------+-------------------+--------+------------+-----+-------+------------+-----------+--------------------------+
 |   Id  |        Name       | Gender |  Birthday  | Age | Alive | Deathdate  |   Child   |          Spouse          |
 +-------+-------------------+--------+------------+-----+-------+------------+-----------+--------------------------+
-|  @I1@ |    Meet /Desai/   |   M    | 1822-01-01 |  68 | False | 1890-03-06 |     NA    | {'@F3@', '@F1@', '@F2@'} |
-|  @I2@ |   Trupti /Desai/  |   F    | 1830-01-12 | 100 | False | 1930-06-12 |  {'@F6@'} | {'@F1@', '@F4@', '@F5@'} |
+|  @I1@ |    Meet /Desai/   |   M    | 1822-01-01 |  68 | False | 1890-03-06 |     NA    | {'@F1@', '@F3@', '@F2@'} |
+|  @I2@ |   Trupti /Desai/  |   F    | 1830-01-12 | 100 | False | 1930-06-12 |  {'@F6@'} | {'@F5@', '@F1@', '@F4@'} |
 |  @I3@ |   Rakesh /Desai/  |   M    | 1790-11-26 |  59 | False | 1850-09-09 |     NA    |         {'@F6@'}         |
-|  @I4@ |   Monica /Bhatt/  |   F    | 1792-11-12 |  47 | False | 1840-04-02 |     NA    |     {'@F3@', '@F6@'}     |
+|  @I4@ |   Monica /Bhatt/  |   F    | 1792-11-12 |  47 | False | 1840-04-02 |     NA    |     {'@F6@', '@F3@'}     |
 |  @I5@ |   Abhay /Mehta/   |   M    | 1823-02-01 |  48 | False | 1871-04-06 |  {'@F6@'} |            NA            |
 |  @I6@ |   Kevin /Desai/   |   M    | 1824-02-01 |  55 | False | 1880-01-10 |  {'@F6@'} |     {'@F8@', '@F7@'}     |
 |  @I7@ |   Urvika /Bhatt/  |   F    | 1832-02-14 |  68 | False | 1900-06-24 |     NA    |         {'@F7@'}         |
@@ -49,13 +49,13 @@
 |  @F5@ | 1850-09-11 |     NA     |   @I27@    |  Digant /Parekh/  |   @I2@  |   Trupti /Desai/  |                          {'@I28@'}                           |
 |  @F2@ | 1862-07-10 |     NA     |   @I25@    |   Bholu /Desai/   |   @I1@  |    Meet /Desai/   |                              NA                              |
 |  @F3@ | 1862-07-10 |     NA     |    @I1@    |    Meet /Desai/   |   @I4@  |   Monica /Bhatt/  |                              NA                              |
-|  @F6@ | 1820-04-12 |     NA     |    @I3@    |   Rakesh /Desai/  |   @I4@  |   Monica /Bhatt/  | {'@I2@', '@I38@', '@I31@', '@I29@', '@I6@', '@I5@', '@I35@'} |
+|  @F6@ | 1820-04-12 |     NA     |    @I3@    |   Rakesh /Desai/  |   @I4@  |   Monica /Bhatt/  | {'@I31@', '@I5@', '@I6@', '@I35@', '@I29@', '@I38@', '@I2@'} |
 |  @F7@ | 1862-07-10 |     NA     |    @I6@    |   Kevin /Desai/   |   @I7@  |   Urvika /Bhatt/  |                          {'@I10@'}                           |
 |  @F8@ | 1848-01-12 | 1852-07-14 |    @I6@    |   Kevin /Desai/   |   @I8@  |   Preeti /Joshi/  |                           {'@I9@'}                           |
 |  @F9@ | 1893-08-04 |     NA     |   @I10@    |   Laxman /Desai/  |  @I11@  |   Riddhi /Desai/  |                          {'@I12@'}                           |
 | @F10@ | 1925-06-05 | 1930-11-15 |   @I13@    |   Govind /Borad/  |  @I12@  |   Hiral /Desai/   |                              NA                              |
 | @F11@ |     NA     |     NA     |   @I14@    | Miller /Robinson/ |  @I15@  |  Ellie /Robinson/ |                          {'@I17@'}                           |
-| @F12@ |     NA     |     NA     |   @I18@    |  Erica /Robinson/ |  @I17@  | Miller /Robinson/ |                      {'@I19@', '@I20@'}                      |
+| @F12@ |     NA     |     NA     |   @I18@    |  Erica /Robinson/ |  @I17@  | Miller /Robinson/ |                      {'@I20@', '@I19@'}                      |
 | @F13@ |     NA     |     NA     |   @I21@    |  Ross /Robinson/  |  @I22@  |  Joey /Robinson/  |                 {'@I23@', '@I24@', '@I25@'}                  |
 | @F14@ | 1850-05-05 | 2000-06-12 |   @I29@    |   Fenil /Patel/   |  @I30@  |   Ankita /Patel/  |                              NA                              |
 | @F15@ | 2019-03-04 | 2018-07-03 |   @I31@    |   Mayur /Desai/   |  @I32@  |    Naina /Shah/   |                          {'@I33@'}                           |
@@ -67,31 +67,11 @@ US_02: Bholu /Desai/ birthday after marriage date on line number 439
 US_02: Naina /Shah/ birthday after marriage date on line number 528
 US_02: Mayur /Desai/ birthday after marriage date on line number 528
 US_02: Keval /Kuchadiya/ birthday after marriage date on line number 545
-
+US_03: Suresh /Kapoor/ birthday after death date on line number 52
+US_03: Kangana /Patel/ birthday after death date on line number 63
 US_11: Trupti /Desai/married twice at the same time
 US_11: Trupti /Desai/married twice at the same time
 US_11: Meet /Desai/married twice at the same time
 US_11: Trupti /Desai/married twice at the same time
 US_11: Monica /Bhatt/married twice at the same time
-
-US22 - Individual ID @I1@ already exists
-US22 - Family ID Shaikh2 already exists
-US22 - Individual ID Irfan02 already exists
-
-US23 : Name Lisa /Braeden/ with birthdate AUG_1980 already exists
-US23 : Name Adam /Milligan/ with birthdate 29_SEP_1990 already exists
-
-US_15:
-t_exactly_15_kids (__main__.TUserStory15) ... ok\
-t_less_than_15_kid (__main__.TUserStory15) ... ok\
-t_greater_than_15_kid (__main__.TUserStory15) ... ok\
-t_no_kid (__main__.TUserStory15) ... ok\
-t_same_15_kids (__main__.TUserStory15) ... ok\
-
-US_16:
-t_daugh(__main__.TUserStory16) ... ok\
-t_no_child(__main__.TUserStory16) ... ok\
-t_no_son_matches_father (__main__.TUserStory16) ... ok\
-t_one_son_sameas_fat(__main__.TUserStory16) ... ok\
-\pard\pardeftab720\partightenfactor0
-t_one_sonsameas_fat(__main__.TUserStory16) ... ok\
+US_33: @I1@ Amrita /Khan/ has age 14 and is orphan
