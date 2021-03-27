@@ -6,7 +6,9 @@ import datetime
 from Base_Files.Repository import Repository
 
 from User_Stories.US_2 import US_2
+from User_Stories.US_3 import US_3
 from User_Stories.US_11 import US_11
+from User_Stories.US_33 import US_33
 
 class TestRepository(unittest.TestCase):
     """ Class that contains all the test cases. """
@@ -30,6 +32,15 @@ class TestRepository(unittest.TestCase):
 
         """ Tests that husbands and wifes are not married twice at the same time. """
 
+        def test_US_03(self):
+            """ Function that tests user story 3 """
+
+            repository = Repository("../GEDCOM_Files/US_03.ged")
+            expected = ['US_03: Suresh /Kapoor/ birthday after death date on line number 52',
+                        'US_03: Kangana /Patel/ birthday after death date on line number 63']
+            actual = US_3(repository.get_individual())
+            self.assertEqual(actual, expected)
+
         def test_user_story_11(self):
             """ Tests that husbands and wifes are not married twice at the same time and prints out the cases if so"""
 
@@ -41,6 +52,19 @@ class TestRepository(unittest.TestCase):
                                                   'Anushka /Shah/married twice at the same time'])
             self.assertFalse(US_11(repository) == ['Kangana /Patel married twice on the same time'])
             self.assertTrue(US_11(repository) != ['Suresh /Patel married twice on the same time'])
+
+        """ Tests US33. checks that list all orphans. """
+
+        def test_US_33(self):
+            """ Tests US33. checks that list all orphans. """
+
+            repository = Repository("../GEDCOM_Files/US_33.ged")
+            output = ['@I1@ Amrita /Khan/ has age 14 and is orphan']
+            self.assertEqual(US_33(repository), output)
+            self.assertTrue(US_33(repository) == ['@I1@ Amrita /Khan/ has age 14 and is orphan'])
+            self.assertFalse(US_33(repository) == ['@I1@ Saif /Khan/ 13 is orphan and age is less than 18'])
+            self.assertTrue(US_33(repository) != ['@I1@ Kareena /Kapoor/ 16 is orphan and age is less than 18'])
+
 
 if __name__ == "__main__":
     """ Runs all the tests created above. """
