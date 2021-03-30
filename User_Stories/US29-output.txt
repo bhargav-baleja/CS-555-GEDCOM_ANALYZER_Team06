@@ -1,0 +1,11 @@
+PS D:\phoenix\courses\555\Sprint 2\CS-555-GEDCOM_ANALYZER_Team06\User_Stories> python US29-TC.py
+test_us29_1 (__main__.UnitTestUS22) ... ok
+test_us29_2 (__main__.UnitTestUS22) ... ok
+test_us29_3 (__main__.UnitTestUS22) ... ok
+test_us29_4 (__main__.UnitTestUS22) ... ok
+test_us29_5 (__main__.UnitTestUS22) ... ok
+
+----------------------------------------------------------------------
+Ran 5 tests in 0.006s
+
+OK
