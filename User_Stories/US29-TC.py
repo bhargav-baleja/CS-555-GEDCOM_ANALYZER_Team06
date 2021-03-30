@@ -2,9 +2,9 @@ import unittest
 
 from US29 import *
 
-class UnitTestUS22(unittest.TestCase):
+class UnitTestUS29(unittest.TestCase):
     def setUp(self):
-        self.file = "US_29-30.ged"
+        self.file = "../GEDCOM_Files/US_29-30.ged"
         self.output = US29(self.file)
 
     def test_us29_1(self):
