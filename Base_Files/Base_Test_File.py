@@ -7,6 +7,8 @@ from Base_Files.Repository import Repository
 
 from User_Stories.US_2 import US_2
 from User_Stories.US_3 import US_3
+from User_Stories.US_08 import US_08
+from User_Stories.US_09 import US_09
 from User_Stories.US_11 import US_11
 from User_Stories.US_33 import US_33
 
@@ -41,6 +43,35 @@ class TestRepository(unittest.TestCase):
             actual = US_3(repository.get_individual())
             self.assertEqual(actual, expected)
 
+        def test_US_08(self):
+            """ The function is to test US_08 function"""
+            repository = Repository('../GEDCOM_Files/US_02.ged')
+
+            expected = [
+                "Family id Line number: 523\n The Father @I31@ is younger than his child @I33@ which is illegal."]
+
+            actual = US_08(repository.get_individual(), repository.get_family())
+
+            self.assertEqual(actual, expected)
+
+        def test_us09(self):
+            """ The function is to test US_09 function"""
+            repository = Repository('../GEDCOM_Files/US_02.ged')
+
+            # The expected output
+            expected = ['Family id Line number: 426\n Birth of child @I28@ is before the death of the father @I27@',
+                        'Family id Line number: 426\n Birth of child @I28@ is before the death of the mother @I2@',
+                        'Family id Line number: 451\n Birth of child @I38@ is before the death of the father @I3@',
+                        'Family id Line number: 451\n Birth of child @I38@ is before the death of the mother @I4@',
+                        'Family id Line number: 451\n Birth of child @I31@ is before the death of the father @I3@',
+                        'Family id Line number: 451\n Birth of child @I31@ is before the death of the mother @I4@',
+                        'Family id Line number: 451\n Birth of child @I35@ is before the death of the father @I3@',
+                        'Family id Line number: 451\n Birth of child @I35@ is before the death of the mother @I4@']
+
+            actual = US_09(repository.get_individual(), repository.get_family())
+
+            self.assertEqual(actual, expected)
+
         def test_user_story_11(self):
             """ Tests that husbands and wifes are not married twice at the same time and prints out the cases if so"""
 
@@ -64,6 +95,7 @@ class TestRepository(unittest.TestCase):
             self.assertTrue(US_33(repository) == ['@I1@ Amrita /Khan/ has age 14 and is orphan'])
             self.assertFalse(US_33(repository) == ['@I1@ Saif /Khan/ 13 is orphan and age is less than 18'])
             self.assertTrue(US_33(repository) != ['@I1@ Kareena /Kapoor/ 16 is orphan and age is less than 18'])
+
 
 
 if __name__ == "__main__":

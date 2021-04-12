@@ -13,7 +13,7 @@ class Test(unittest.TestCase):
 
     def test_us09(self):
         """ The function is to test US_09 function"""
-        repository= Repository('../GEDCOM_Files/US_02.ged')
+        repository = Repository('../GEDCOM_Files/US_02.ged')
 
         # The expected output
         expected = ['Family id Line number: 426\n Birth of child @I28@ is before the death of the father @I27@',

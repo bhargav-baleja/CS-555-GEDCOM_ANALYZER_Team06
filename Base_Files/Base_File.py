@@ -6,6 +6,8 @@ from Base_Files.Repository import Repository
 
 from User_Stories.US_2 import US_2
 from User_Stories.US_3 import US_3
+from User_Stories.US_08 import US_08
+from User_Stories.US_09 import US_09
 from User_Stories.US_11 import US_11
 from User_Stories.US_33 import US_33
 
@@ -33,11 +35,21 @@ def main():
     for item in US_3(individual1):
         print(item)
 
+    for item in US_08(individual, family):
+        print("US-08:")
+        print(item)
+
+    for item in US_09(individual, family):
+        print("US-09:")
+        print(item)
+
     for item in US_11(repository):
         print(f"US_11: {item}")
 
     for item in US_33(repository2):
         print(f"US_33: {item}")
+
+
 
 if __name__ == '__main__':
     """ Calls main method. """

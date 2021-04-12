@@ -1,10 +1,10 @@
 +-------+-------------------+--------+------------+-----+-------+------------+-----------+--------------------------+
 |   Id  |        Name       | Gender |  Birthday  | Age | Alive | Deathdate  |   Child   |          Spouse          |
 +-------+-------------------+--------+------------+-----+-------+------------+-----------+--------------------------+
-|  @I1@ |    Meet /Desai/   |   M    | 1822-01-01 |  68 | False | 1890-03-06 |     NA    | {'@F1@', '@F3@', '@F2@'} |
-|  @I2@ |   Trupti /Desai/  |   F    | 1830-01-12 | 100 | False | 1930-06-12 |  {'@F6@'} | {'@F5@', '@F1@', '@F4@'} |
+|  @I1@ |    Meet /Desai/   |   M    | 1822-01-01 |  68 | False | 1890-03-06 |     NA    | {'@F3@', '@F1@', '@F2@'} |
+|  @I2@ |   Trupti /Desai/  |   F    | 1830-01-12 | 100 | False | 1930-06-12 |  {'@F6@'} | {'@F1@', '@F4@', '@F5@'} |
 |  @I3@ |   Rakesh /Desai/  |   M    | 1790-11-26 |  59 | False | 1850-09-09 |     NA    |         {'@F6@'}         |
-|  @I4@ |   Monica /Bhatt/  |   F    | 1792-11-12 |  47 | False | 1840-04-02 |     NA    |     {'@F6@', '@F3@'}     |
+|  @I4@ |   Monica /Bhatt/  |   F    | 1792-11-12 |  47 | False | 1840-04-02 |     NA    |     {'@F3@', '@F6@'}     |
 |  @I5@ |   Abhay /Mehta/   |   M    | 1823-02-01 |  48 | False | 1871-04-06 |  {'@F6@'} |            NA            |
 |  @I6@ |   Kevin /Desai/   |   M    | 1824-02-01 |  55 | False | 1880-01-10 |  {'@F6@'} |     {'@F8@', '@F7@'}     |
 |  @I7@ |   Urvika /Bhatt/  |   F    | 1832-02-14 |  68 | False | 1900-06-24 |     NA    |         {'@F7@'}         |
@@ -19,7 +19,7 @@
 | @I16@ |   Sam /Robinson/  |   M    | 2000-09-13 |  20 |  True |     NA     |     NA    |            NA            |
 | @I17@ | Miller /Robinson/ |   F    | 1980-09-13 |  40 |  True |     NA     | {'@F11@'} |        {'@F12@'}         |
 | @I18@ |  Erica /Robinson/ |   F    | 1981-09-13 |  39 |  True |     NA     |     NA    |        {'@F12@'}         |
-| @I19@ |  Joey /Robinson/  |   F    | 1996-04-10 |  24 |  True |     NA     | {'@F12@'} |            NA            |
+| @I19@ |  Joey /Robinson/  |   F    | 1996-04-10 |  25 |  True |     NA     | {'@F12@'} |            NA            |
 | @I20@ |  Joey /Robinson/  |   F    | 1997-11-08 |  23 |  True |     NA     | {'@F12@'} |            NA            |
 | @I21@ |  Ross /Robinson/  |   M    | 1970-01-04 |  51 |  True |     NA     |     NA    |        {'@F13@'}         |
 | @I22@ |  Joey /Robinson/  |   F    | 1971-08-10 |  49 |  True |     NA     |     NA    |        {'@F13@'}         |
@@ -49,14 +49,14 @@
 |  @F5@ | 1850-09-11 |     NA     |   @I27@    |  Digant /Parekh/  |   @I2@  |   Trupti /Desai/  |                          {'@I28@'}                           |
 |  @F2@ | 1862-07-10 |     NA     |   @I25@    |   Bholu /Desai/   |   @I1@  |    Meet /Desai/   |                              NA                              |
 |  @F3@ | 1862-07-10 |     NA     |    @I1@    |    Meet /Desai/   |   @I4@  |   Monica /Bhatt/  |                              NA                              |
-|  @F6@ | 1820-04-12 |     NA     |    @I3@    |   Rakesh /Desai/  |   @I4@  |   Monica /Bhatt/  | {'@I31@', '@I5@', '@I6@', '@I35@', '@I29@', '@I38@', '@I2@'} |
+|  @F6@ | 1820-04-12 |     NA     |    @I3@    |   Rakesh /Desai/  |   @I4@  |   Monica /Bhatt/  | {'@I38@', '@I5@', '@I35@', '@I6@', '@I31@', '@I29@', '@I2@'} |
 |  @F7@ | 1862-07-10 |     NA     |    @I6@    |   Kevin /Desai/   |   @I7@  |   Urvika /Bhatt/  |                          {'@I10@'}                           |
 |  @F8@ | 1848-01-12 | 1852-07-14 |    @I6@    |   Kevin /Desai/   |   @I8@  |   Preeti /Joshi/  |                           {'@I9@'}                           |
 |  @F9@ | 1893-08-04 |     NA     |   @I10@    |   Laxman /Desai/  |  @I11@  |   Riddhi /Desai/  |                          {'@I12@'}                           |
 | @F10@ | 1925-06-05 | 1930-11-15 |   @I13@    |   Govind /Borad/  |  @I12@  |   Hiral /Desai/   |                              NA                              |
 | @F11@ |     NA     |     NA     |   @I14@    | Miller /Robinson/ |  @I15@  |  Ellie /Robinson/ |                          {'@I17@'}                           |
 | @F12@ |     NA     |     NA     |   @I18@    |  Erica /Robinson/ |  @I17@  | Miller /Robinson/ |                      {'@I20@', '@I19@'}                      |
-| @F13@ |     NA     |     NA     |   @I21@    |  Ross /Robinson/  |  @I22@  |  Joey /Robinson/  |                 {'@I23@', '@I24@', '@I25@'}                  |
+| @F13@ |     NA     |     NA     |   @I21@    |  Ross /Robinson/  |  @I22@  |  Joey /Robinson/  |                 {'@I24@', '@I23@', '@I25@'}                  |
 | @F14@ | 1850-05-05 | 2000-06-12 |   @I29@    |   Fenil /Patel/   |  @I30@  |   Ankita /Patel/  |                              NA                              |
 | @F15@ | 2019-03-04 | 2018-07-03 |   @I31@    |   Mayur /Desai/   |  @I32@  |    Naina /Shah/   |                          {'@I33@'}                           |
 | @F16@ |     NA     |     NA     |   @I33@    |   Hitesh /Desai/  |  @I34@  |    Nidhi /Sinh/   |                              NA                              |
@@ -69,6 +69,33 @@ US_02: Mayur /Desai/ birthday after marriage date on line number 528
 US_02: Keval /Kuchadiya/ birthday after marriage date on line number 545
 US_03: Suresh /Kapoor/ birthday after death date on line number 52
 US_03: Kangana /Patel/ birthday after death date on line number 63
+US-08:
+Family id Line number: 523
+ The Father @I31@ is younger than his child @I33@ which is illegal.
+US-09:
+Family id Line number: 426
+ Birth of child @I28@ is before the death of the father @I27@
+US-09:
+Family id Line number: 426
+ Birth of child @I28@ is before the death of the mother @I2@
+US-09:
+Family id Line number: 451
+ Birth of child @I38@ is before the death of the father @I3@
+US-09:
+Family id Line number: 451
+ Birth of child @I38@ is before the death of the mother @I4@
+US-09:
+Family id Line number: 451
+ Birth of child @I35@ is before the death of the father @I3@
+US-09:
+Family id Line number: 451
+ Birth of child @I35@ is before the death of the mother @I4@
+US-09:
+Family id Line number: 451
+ Birth of child @I31@ is before the death of the father @I3@
+US-09:
+Family id Line number: 451
+ Birth of child @I31@ is before the death of the mother @I4@
 US_11: Trupti /Desai/married twice at the same time
 US_11: Trupti /Desai/married twice at the same time
 US_11: Meet /Desai/married twice at the same time
