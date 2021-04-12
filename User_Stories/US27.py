@@ -42,7 +42,7 @@ def US27():
 
   output = []
 
-  with open("../GEDCOM_FILES/US19-.ged","r") as reader: 
+  with open("../GEDCOM_Files/US27.ged", "r") as reader:
 
     name = ''
     date = ''

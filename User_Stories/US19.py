@@ -68,7 +68,7 @@ def findGrandParents(x):
 
 
 def US19():
-  with open("../GEDCOM_FILES/US19-.ged","r") as reader: 
+  with open("../GEDCOM_Files/US27.ged", "r") as reader:
     famSwitch = False
 
     temp = { 'CHIL' : []  }
