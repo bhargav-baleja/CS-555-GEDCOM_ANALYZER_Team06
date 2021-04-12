@@ -1,0 +1,113 @@
+0 HEAD
+1 SOUR Family Echo
+2 WWW http://www.familyecho.com/
+1 FILE Family 3
+1 DATE 11 APR 2021
+1 DEST ANSTFILE
+1 GEDC
+2 VERS 5.5.1
+2 FORM LINEAGE-LINKED
+1 SUBM @I1@
+2 NAME Irfan
+1 SUBN
+1 CHAR UTF-8
+0 @I1@ INDI
+1 NAME Rick /Sanchez/
+2 GIVN Rick
+2 SURN Sanchez
+2 _MARNM Sanchez
+1 SEX M
+1 BIRT
+2 DATE 1 JAN 1950
+1 FAMS @F1@
+0 @I2@ INDI
+1 NAME Mariah /Sanchez/
+2 GIVN Mariah
+2 SURN Sanchez
+2 _MARNM Sanchez
+1 SEX F
+1 BIRT
+2 DATE 1 FEB 1951
+1 FAMS @F1@
+0 @I3@ INDI
+1 NAME Beth /Sanchez/
+2 GIVN Beth
+2 SURN Sanchez
+2 _MARNM Sanchez
+1 BIRT
+2 DATE 1 FEB 1976
+1 FAMS @F2@
+1 FAMC @F1@
+0 @I4@ INDI
+1 NAME Jerry /Smith/
+2 GIVN Jerry
+2 SURN Smith
+2 _MARNM Smith
+1 SEX M
+1 BIRT
+2 DATE 6 JAN 1975
+1 FAMS @F2@
+0 @I5@ INDI
+1 NAME Marry /Sanchez/
+2 GIVN Marry
+2 SURN Sanchez
+2 _MARNM Sanchez
+1 SEX F
+1 BIRT
+2 DATE 4 APR 1973
+1 FAMS @F3@
+1 FAMC @F1@
+0 @I6@ INDI
+1 NAME Dave /Rockefeller/
+2 GIVN Dave
+2 SURN Rockefeller
+2 _MARNM Rockefeller
+1 SEX M
+1 BIRT
+2 DATE 2 FEB 1972
+1 FAMS @F3@
+0 @I7@ INDI
+1 NAME Morty /Smith/
+2 GIVN Morty
+2 SURN Smith
+2 _MARNM Smith
+1 SEX M
+1 BIRT
+2 DATE 2 JUL 1995
+1 FAMS @F4@
+1 FAMC @F2@
+0 @I8@ INDI
+1 NAME Brenda /Rockefeller/
+2 GIVN Brenda
+2 SURN Rockefeller
+2 _MARNM Rockefeller
+1 SEX F
+1 BIRT
+2 DATE 7 MAY 1994
+1 FAMS @F4@
+1 FAMC @F3@
+0 @F1@ FAM
+1 HUSB @I1@
+1 WIFE @I2@
+1 CHIL @I3@
+1 CHIL @I5@
+1 MARR
+2 DATE 1 JAN 1989
+1 _CURRENT Y
+0 @F2@ FAM
+1 HUSB @I4@
+1 WIFE @I3@
+1 CHIL @I7@
+1 MARR
+2 DATE 2 FEB 1992
+1 _CURRENT Y
+0 @F3@ FAM
+1 HUSB @I6@
+1 WIFE @I5@
+1 CHIL @I8@
+1 _CURRENT Y
+0 @F4@ FAM
+1 HUSB @I7@
+1 WIFE @I8@
+1 _CURRENT Y
+0 TRLR

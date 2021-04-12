@@ -1,0 +1,11 @@
+python US27-TC.py
+test_age_1 (__main__.UnitTestUS27) ... ok
+test_age_2 (__main__.UnitTestUS27) ... ok
+test_age_3 (__main__.UnitTestUS27) ... ok
+test_age_4 (__main__.UnitTestUS27) ... ok
+test_age_5 (__main__.UnitTestUS27) ... ok
+
+----------------------------------------------------------------------
+Ran 5 tests in 0.011s
+
+OK

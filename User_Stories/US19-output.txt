@@ -1,0 +1,11 @@
+python US19-TC.py
+test_cousin_marriage_1 (__main__.UnitTestUS19) ... ok
+test_cousin_marriage_2 (__main__.UnitTestUS19) ... ok
+test_cousin_marriage_3 (__main__.UnitTestUS19) ... ok
+test_cousin_marriage_4 (__main__.UnitTestUS19) ... ok
+test_family_tree_dict (__main__.UnitTestUS19) ... ok 
+
+----------------------------------------------------------------------
+Ran 5 tests in 0.005s
+
+OK
