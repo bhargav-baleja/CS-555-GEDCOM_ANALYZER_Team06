@@ -1,6 +1,6 @@
 """
 Test cases for user story US_09
-Author: Varun Mullins
+Author: Bhargav Baleja
 """
 
 import unittest
@@ -9,32 +9,25 @@ from Base_Files.Base_File import Repository
 
 
 class Test(unittest.TestCase):
-    """For testing user story US_05"""
+    """For testing user story US_09"""
 
     def test_us09(self):
         """ The function is to test US_09 function"""
-        indi_repo: Repository = Repository('../GedcomFiles/ssw555_input_file.ged')
+        repository= Repository('../GEDCOM_Files/US_02.ged')
 
         # The expected output
-        expected = ["Family id Line number: 398\n"
-                    "Birth of child @I28@ is before the death of the father @I27@",
-                    "Family id Line number: 398\n"
-                    "Birth of child @I28@ is before the death of the mother @I2@",
-                    "Family id Line number: 407\n"
-                    "Birth of child @I35@ is before the death of the father @I3@",
-                    "Family id Line number: 407\n"
-                    "Birth of child @I35@ is before the death of the mother @I4@",
-                    "Family id Line number: 407\n"
-                    "Birth of child @I31@ is before the death of the father @I3@",
-                    "Family id Line number: 407\n"
-                    "Birth of child @I31@ is before the death of the mother @I4@"]
+        expected = ['Family id Line number: 426\n Birth of child @I28@ is before the death of the father @I27@',
+                    'Family id Line number: 426\n Birth of child @I28@ is before the death of the mother @I2@',
+                    'Family id Line number: 451\n Birth of child @I38@ is before the death of the father @I3@',
+                    'Family id Line number: 451\n Birth of child @I38@ is before the death of the mother @I4@',
+                    'Family id Line number: 451\n Birth of child @I31@ is before the death of the father @I3@',
+                    'Family id Line number: 451\n Birth of child @I31@ is before the death of the mother @I4@',
+                    'Family id Line number: 451\n Birth of child @I35@ is before the death of the father @I3@',
+                    'Family id Line number: 451\n Birth of child @I35@ is before the death of the mother @I4@']
 
-        # generating a list of the output from the function
-        result = [value for value in US_09(indi_repo._individual, indi_repo._family)]
+        actual = US_09(repository.get_individual(), repository.get_family())
 
-        self.assertEqual(result, expected)  # positive test result
-        self.assertFalse(
-            result == ['The family @F11@ has a death of wife @I7@ before the marriage date.'])  # Negative # test case
+        self.assertEqual(actual, expected)
 
 
 if __name__ == "__main__":
