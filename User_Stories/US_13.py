@@ -2,7 +2,7 @@ import datetime
 
 def US_13(family_object, individual_object):
     """ To check if the sibiling are twins """
-    warnings = set()
+    warnings =set()
     for attribute in family_object.values():    
         child = list(attribute._children)
         if child != ['N','A']:
@@ -22,6 +22,6 @@ def US_13(family_object, individual_object):
 
                     if difference > datetime.timedelta(days=2) and difference < datetime.timedelta(days=240):
                         a = sorted([person_one_id, person_two_id])
-                        warnings.add(f"The family id {attribute._family_id} has twins {individual_object[a[0]]._name} and {individual_object[a[1]]._name}, Line number: {attribute.get_line_numbers()['family_id']}")
+                        warnings.add(f"The family id {attribute._family_id} has twins {individual_object[a[0]]._name} and {individual_object[a[1]]._name} and Line number: {attribute.get_line_numbers()['family_id']}")
         child = []       
     return warnings
