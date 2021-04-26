@@ -11,6 +11,8 @@ from User_Stories.US_06 import US_06
 from User_Stories.US_08 import US_08
 from User_Stories.US_09 import US_09
 from User_Stories.US_11 import US_11
+from User_Stories.US_12 import US_12
+from User_Stories.US_13 import US_13
 from User_Stories.US_33 import US_33
 
 def main():
@@ -22,12 +24,15 @@ def main():
     repository1 = Repository("../GEDCOM_Files/US_03.ged")
     repository2 = Repository("../GEDCOM_Files/US_33.ged")
     repository3 = Repository("../GEDCOM_Files/US_06.ged")
+    repository4 = Repository("../GEDCOM_Files/US_12.ged")
     individual = repository.get_individual()
     individual1 = repository1.get_individual()
     individual2 = repository2.get_individual()
     individual3 = repository3.get_individual()
+    individual4 = repository4.get_individual()
     family = repository.get_family()
     family3 = repository3.get_family()
+    family4 = repository4.get_family()
 
     # Prints individual pretty table.
     repository.individual_pretty_table()
@@ -54,6 +59,12 @@ def main():
 
     for item in US_11(repository):
         print(f"US_11: {item}")
+
+    for item in US_12(individual4, family4):
+        print(f"US_12: {item}")
+
+    for item in US_13(family, individual):
+        print(f"US_13: {item}")
 
     for item in US_33(repository2):
         print(f"US_33: {item}")
